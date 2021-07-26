@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const spotifyCtrl = require('../controllers/spotify')
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('yo');
-});
+router.get('/', spotifyCtrl.getToken);
 
 module.exports = router;
