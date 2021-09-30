@@ -9,7 +9,7 @@ function getToken(req, res) {
 			headers: {
 				"Content-Type": "application/x-www-form-urlencoded",
 				Authorization:
-					"Basic " + btoa(spotify.ClientID + ":" + spotify.ClientSecret),
+					"Basic " + btoa(process.env.ClientID + ":" + process.env.ClientSecret),
 			},
 			data: "grant_type=client_credentials",
 			method: "POST",
